@@ -22,4 +22,6 @@ int main(void)
 	print_size_of("a long int", sizeof(long int));
 	print_size_of("a long long int", sizeof(long long int));
 	print_size_of("a float", sizeof(float));
+
+	return (0);
 }
