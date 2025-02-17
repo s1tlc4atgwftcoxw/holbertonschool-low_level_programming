@@ -3,14 +3,14 @@
 #define false 0
 
 /**
- * pow - Calculate the power of a number - ~~quick~~ and dirty
+ * int_pow - Calculate the power of a number - ~~quick~~ and dirty
  *
  * @n: The number to be raised
  * @exp: The exponent
  *
  * Return: The result of the operation
  */
-int pow(int n, int exp)
+int int_pow(int n, int exp)
 {
 	int i;
 	int ret = n;
@@ -38,7 +38,7 @@ void print_number(int n, int width, char pad_with)
 
 	for (i = width; i > 1; i--)
 	{
-		int value = n / pow(10, i - 1);
+		int value = n / int_pow(10, i - 1);
 
 		if (value)
 		{
@@ -61,15 +61,14 @@ void times_table(void)
 	int x;
 	int y;
 
-	for (y = 0; y < 9; y++)
+	for (y = 0; y < 10; y++)
 	{
 		_putchar('0');
-		_putchar(',');
 
-		for (x = 1; x < 9; x++)
+		for (x = 1; x < 10; x++)
 		{
-			print_number(x * y, 3, ' ');
 			_putchar(',');
+			print_number(x * y, 3, ' ');
 		}
 
 		_putchar('\n');
