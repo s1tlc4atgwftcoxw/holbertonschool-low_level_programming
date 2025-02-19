@@ -38,7 +38,7 @@ void print_number(int n, int width, char pad_with)
 
 	for (i = width; i > 1; i--)
 	{
-		int value = n / int_pow(10, i - 1);
+		int value = n / int_pow(10, i - 1) % 10;
 
 		if (value)
 		{

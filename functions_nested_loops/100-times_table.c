@@ -38,7 +38,7 @@ void print_number(int n, int width, char pad_with)
 
 	for (i = width; i > 1; i--)
 	{
-		int value = n / int_pow(10, i - 1);
+		int value = n / int_pow(10, i - 1) % 10;
 
 		if (value)
 		{
@@ -56,12 +56,15 @@ void print_number(int n, int width, char pad_with)
 /**
  * print_times_table - Prints the n-times table
  *
- * @n: The size of the times table
+ * @n: The size of the times table - allowed range 0..=15
  */
 void print_times_table(int n)
 {
 	int x;
 	int y;
+
+	if (n > 15)
+		return;
 
 	for (y = 0; y < n + 1; y++)
 	{
