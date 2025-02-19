@@ -26,5 +26,7 @@ int main(void)
 		printf("%lu", fib);
 	}
 
+	printf("\n");
+
 	return (0);
 }
