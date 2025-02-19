@@ -9,10 +9,11 @@
 int main(void)
 {
 	int i;
-	uint64_t a = 0;
-	uint64_t b = 1;
+	uint64_t a = 0; /* F(0) */
+	uint64_t b = 1; /* F(1) */
 
-	for (i = 2; i <= 50; i++)
+	/* Fibonacci sequence where n is 2..52 */
+	for (i = 2; i < 52; i++)
 	{
 		uint64_t fib = a + b;
 
